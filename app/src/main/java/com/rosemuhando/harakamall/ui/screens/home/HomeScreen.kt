@@ -47,10 +47,13 @@ fun HomeScreen() {
         )
         Text(
             text = "Haraka Mobility provides mobility equipment inside The Mall, which includes manual wheelchairs, special needs chairs, childrens chairs, power chairs, powered mobility scooters and special needs child strollers. Use our online \"click N' Collect service to book your rental equipment, we will even come to you when you arrive in the mall or the parking area or come to one of our 3 conveniently located kiosks when you arrive.",
-            FontSize = 15.sp,
-            fontWeight = FontWeight.Bold,
+            fontSize = 15.sp,
+            fontStyle = FontStyle.Italic
+
+
         )
-    }
+
+
 
     Button(
         onClick = {},
@@ -59,6 +62,7 @@ fun HomeScreen() {
     ) {
         Text(text = "Add to cart")
     }
+}
 
 }
 
