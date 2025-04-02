@@ -2,7 +2,6 @@ package com.rosemuhando.harakamall.ui.screens.home
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
@@ -20,6 +19,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.rosemuhando.harakamall.R
 
+
 @Composable
 
 fun HomeScreen() {
@@ -32,6 +32,7 @@ fun HomeScreen() {
             fontSize = 30.sp,
             color = Color.Magenta,
             fontWeight = FontWeight.ExtraBold,
+
 
             )
         Image(
@@ -55,16 +56,18 @@ fun HomeScreen() {
 
 
 
-    Button(
-        onClick = {},
-        colors = ButtonDefaults.buttonColors(Color.Magenta),
-        shape = RoundedCornerShape(15.dp),
-    ) {
-        Text(text = "Add to cart")
+        Button(
+            onClick = {},
+            colors = ButtonDefaults.buttonColors(Color.Magenta),
+            shape = RoundedCornerShape(15.dp),
+        ) {
+            Text(text = "Add to cart")
+        }
     }
-}
 
 }
+
+
 
 
 
