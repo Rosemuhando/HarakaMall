@@ -37,7 +37,7 @@ fun HomeScreen() {
             )
         Image(
             painter = painterResource(R.drawable.home),
-            contentDescription = ""
+            contentDescription = "home"
         )
         Text(
             text = "Welcome to my app",

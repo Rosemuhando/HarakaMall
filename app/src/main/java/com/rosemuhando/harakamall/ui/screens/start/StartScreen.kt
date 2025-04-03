@@ -79,8 +79,9 @@ fun StartScreen(){
         Button(
             onClick = {},
             colors = ButtonDefaults.buttonColors(neworange),
-            shape = RoundedCornerShape(10.dp),
-            modifier = Modifier.fillMaxSize().padding(start = 20.dp,end =20.dp)
+            shape = RoundedCornerShape(5.dp),
+            modifier = Modifier.fillMaxSize().padding(start = 15.dp,end =15.dp),
+
         ) {
             Text(text = "get started")
         }
