@@ -2,7 +2,9 @@ package com.rosemuhando.harakamall.ui.screens.home
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
@@ -17,12 +19,14 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavController
+import androidx.navigation.compose.rememberNavController
 import com.rosemuhando.harakamall.R
 
 
 @Composable
 
-fun HomeScreen() {
+fun HomeScreen(navController: NavController) {
     Column(
         modifier = Modifier.fillMaxSize()
     )
@@ -32,13 +36,15 @@ fun HomeScreen() {
             fontSize = 30.sp,
             color = Color.Magenta,
             fontWeight = FontWeight.ExtraBold,
-
-
             )
+
+        Spacer(modifier = Modifier.height(30.dp))
+
         Image(
             painter = painterResource(R.drawable.home),
             contentDescription = "home"
         )
+        Spacer(modifier = Modifier.height(30.dp))
         Text(
             text = "Welcome to my app",
             fontSize = 15.sp,
@@ -54,7 +60,7 @@ fun HomeScreen() {
 
         )
 
-
+        Spacer(modifier = Modifier.height(30.dp))
 
         Button(
             onClick = {},
@@ -74,6 +80,6 @@ fun HomeScreen() {
 @Preview(showBackground = true)
 @Composable
 fun HomeScreenPreview(){
-    HomeScreen()
+    HomeScreen(rememberNavController())
 
 }
