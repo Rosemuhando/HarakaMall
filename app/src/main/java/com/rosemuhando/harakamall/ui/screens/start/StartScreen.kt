@@ -29,6 +29,7 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import com.rosemuhando.harakamall.R
+import com.rosemuhando.harakamall.navigation.ROUT_ITEM
 import com.rosemuhando.harakamall.ui.theme.neworange
 
 @Composable
@@ -43,8 +44,9 @@ fun StartScreen(navController: NavController){
     ){
         Text(
             text = "HarakaMall",
-            fontSize = 20.sp,
-            color = Color.Magenta
+            fontSize = 30.sp,
+            fontWeight = FontWeight.ExtraBold,
+            color = neworange
 
         )
         Spacer(modifier = Modifier.height(20.dp))
@@ -75,13 +77,16 @@ fun StartScreen(navController: NavController){
         Text(
             text = "Haraka Mobility provides mobility equipment inside The Mall, which includes manual wheelchairs, special needs chairs, childrens chairs, power chairs, ...",
             textAlign = TextAlign.Center,
-            fontSize = 16.sp
+            fontSize = 16.sp,
+            fontWeight = FontWeight.ExtraBold,
 
         )
         Spacer(modifier = Modifier.height(20.dp))
 
         Button(
-            onClick = {},
+            onClick = {
+                navController.navigate(ROUT_ITEM)
+            },
             colors = ButtonDefaults.buttonColors(neworange),
             shape = RoundedCornerShape(5.dp),
             modifier = Modifier.fillMaxWidth().padding(start = 20.dp,end =20.dp),

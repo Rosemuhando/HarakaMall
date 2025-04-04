@@ -9,7 +9,9 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material.icons.filled.Notifications
@@ -44,6 +46,7 @@ import androidx.navigation.compose.rememberNavController
 import com.rosemuhando.harakamall.R
 import com.rosemuhando.harakamall.ui.theme.neworange
 import com.rosemuhando.harakamall.ui.theme.newwhite
+import java.nio.file.WatchEvent
 
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -104,54 +107,159 @@ fun ItemScreen(navController: NavController){
 
         //end of search bar
         Spacer(modifier = Modifier.height(30.dp))
-        //start of row
-        Row (){
-            Image(painter = painterResource(R.drawable.shirts),
-                contentDescription = "img",
-                modifier = Modifier.width(200.dp).height(150.dp).clip(shape = RoundedCornerShape(10.dp)),
-                contentScale = ContentScale.FillWidth
+Column (modifier = Modifier.verticalScroll(rememberScrollState())){
+    //start of row
+    Row (){
+        Image(painter = painterResource(R.drawable.shirts),
+            contentDescription = "img",
+            modifier = Modifier.width(200.dp).height(150.dp).clip(shape = RoundedCornerShape(10.dp)),
+            contentScale = ContentScale.FillWidth
+        )
+        Spacer(modifier = Modifier.width(20.dp))
+        Column {
+            Text(
+                text = "Brand new t-shirts for men",
+                fontSize = 20.sp,
+                fontWeight = FontWeight.ExtraBold
             )
-            Spacer(modifier = Modifier.width(20.dp))
-            Column {
-                Text(
-                    text = "Brand new t-shirts for men",
-                    fontSize = 20.sp,
-                    fontWeight = FontWeight.ExtraBold
-                )
-                Text(
-                    text = "The best brand for all men",
-                    fontSize = 10.sp,
+            Text(
+                text = "The best brand for all men",
+                fontSize = 10.sp,
 
-                    )
-                Text(
-                    text = "Ksh.22,000",
-                    fontSize = 20.sp,
-                    textDecoration = TextDecoration.LineThrough
                 )
-                Text(
-                    text = "Ksh.19,000",
-                    fontSize = 15.sp,
-                    fontWeight = FontWeight.ExtraBold
-                )
-                Row {
-                    Icon(imageVector = Icons.Default.Star, contentDescription = "")
-                    Icon(imageVector = Icons.Default.Star, contentDescription = "")
-                    Icon(imageVector = Icons.Default.Star, contentDescription = "")
-                    Icon(imageVector = Icons.Default.Star, contentDescription = "")
-                }
-                Spacer(modifier = Modifier.width(20.dp))
-                Button(onClick = {},
-                    colors = ButtonDefaults.buttonColors(neworange),
-                    shape = RoundedCornerShape(10.dp)
-                ) {
-                    Text( text = "Contact us ")
-                }
-
+            Text(
+                text = "Ksh.22,000",
+                fontSize = 20.sp,
+                textDecoration = TextDecoration.LineThrough
+            )
+            Text(
+                text = "Ksh.19,000",
+                fontSize = 15.sp,
+                fontWeight = FontWeight.ExtraBold
+            )
+            Row {
+                Icon(imageVector = Icons.Default.Star, contentDescription = "")
+                Icon(imageVector = Icons.Default.Star, contentDescription = "")
+                Icon(imageVector = Icons.Default.Star, contentDescription = "")
+                Icon(imageVector = Icons.Default.Star, contentDescription = "")
 
             }
+            Spacer(modifier = Modifier.width(20.dp))
+            Button(onClick = {},
+                colors = ButtonDefaults.buttonColors(neworange),
+                shape = RoundedCornerShape(10.dp)
+            ) {
+                Text( text = "Contact us ")
+            }
+
 
         }
-        //end of row
+
+    }
+    //end of row
+
+    Spacer(modifier = Modifier.height(30.dp))
+    //start of row
+    Row (){
+        Image(painter = painterResource(R.drawable.shirts),
+            contentDescription = "img",
+            modifier = Modifier.width(200.dp).height(150.dp).clip(shape = RoundedCornerShape(10.dp)),
+            contentScale = ContentScale.FillWidth
+        )
+        Spacer(modifier = Modifier.width(20.dp))
+        Column {
+            Text(
+                text = "Brand new t-shirts for men",
+                fontSize = 20.sp,
+                fontWeight = FontWeight.ExtraBold
+            )
+            Text(
+                text = "The best brand for all men",
+                fontSize = 10.sp,
+
+                )
+            Text(
+                text = "Ksh.22,000",
+                fontSize = 20.sp,
+                textDecoration = TextDecoration.LineThrough
+            )
+            Text(
+                text = "Ksh.19,000",
+                fontSize = 15.sp,
+                fontWeight = FontWeight.ExtraBold
+            )
+            Row() {
+                Icon(imageVector = Icons.Default.Star, contentDescription = "")
+                Icon(imageVector = Icons.Default.Star, contentDescription = "")
+                Icon(imageVector = Icons.Default.Star, contentDescription = "")
+                Icon(imageVector = Icons.Default.Star, contentDescription = "")
+            }
+            Spacer(modifier = Modifier.width(20.dp))
+            Button(onClick = {},
+                colors = ButtonDefaults.buttonColors(neworange),
+                shape = RoundedCornerShape(10.dp)
+            ) {
+                Text( text = "Contact us ")
+            }
+
+
+        }
+
+    }
+    //end of row
+
+    Spacer(modifier = Modifier.height(30.dp))
+    //start of row
+    Row (){
+        Image(painter = painterResource(R.drawable.shirts),
+            contentDescription = "img",
+            modifier = Modifier.width(200.dp).height(150.dp).clip(shape = RoundedCornerShape(10.dp)),
+            contentScale = ContentScale.FillWidth
+        )
+        Spacer(modifier = Modifier.width(20.dp))
+        Column {
+            Text(
+                text = "Brand new t-shirts for men",
+                fontSize = 20.sp,
+                fontWeight = FontWeight.ExtraBold
+            )
+            Text(
+                text = "The best brand for all men",
+                fontSize = 10.sp,
+
+                )
+            Text(
+                text = "Ksh.22,000",
+                fontSize = 20.sp,
+                textDecoration = TextDecoration.LineThrough
+            )
+            Text(
+                text = "Ksh.19,000",
+                fontSize = 15.sp,
+                fontWeight = FontWeight.ExtraBold
+            )
+            Row {
+                Icon(imageVector = Icons.Default.Star, contentDescription = "")
+                Icon(imageVector = Icons.Default.Star, contentDescription = "")
+                Icon(imageVector = Icons.Default.Star, contentDescription = "")
+                Icon(imageVector = Icons.Default.Star, contentDescription = "")
+            }
+            Spacer(modifier = Modifier.width(20.dp))
+            Button(onClick = {},
+                colors = ButtonDefaults.buttonColors(neworange),
+                shape = RoundedCornerShape(10.dp)
+            ) {
+                Text( text = "Contact us ")
+            }
+
+
+        }
+
+    }
+    //end of row
+
+}
+
 
 
     }
