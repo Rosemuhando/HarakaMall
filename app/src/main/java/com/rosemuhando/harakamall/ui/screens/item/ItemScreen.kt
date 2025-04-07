@@ -1,5 +1,6 @@
 package com.rosemuhando.harakamall.ui.screens.item
 
+import android.content.Intent
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -35,12 +36,14 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.core.net.toUri
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import com.rosemuhando.harakamall.R
@@ -54,12 +57,17 @@ import java.nio.file.WatchEvent
 
 fun ItemScreen(navController: NavController){
     Column (modifier = Modifier.fillMaxSize()){
+
+        var mContext = LocalContext.current
 //topAppBar
         TopAppBar(
             title = { Text(text = "Products") },
             colors = TopAppBarDefaults.topAppBarColors(
                 containerColor = neworange,
-                titleContentColor = newwhite
+                titleContentColor = newwhite,
+                navigationIconContentColor = newwhite,
+                actionIconContentColor = newwhite
+
             ),
  //icons before the title
 
@@ -142,10 +150,14 @@ Column (modifier = Modifier.verticalScroll(rememberScrollState())){
                 Icon(imageVector = Icons.Default.Star, contentDescription = "")
                 Icon(imageVector = Icons.Default.Star, contentDescription = "")
                 Icon(imageVector = Icons.Default.Star, contentDescription = "")
+                Icon(imageVector = Icons.Default.Star, contentDescription = "")
 
             }
             Spacer(modifier = Modifier.width(20.dp))
-            Button(onClick = {},
+            Button(onClick = {val callIntent = Intent(Intent.ACTION_DIAL)
+                callIntent.data = "tel:0720245837".toUri()
+                mContext.startActivity(callIntent)
+                             },
                 colors = ButtonDefaults.buttonColors(neworange),
                 shape = RoundedCornerShape(10.dp)
             ) {
@@ -193,9 +205,13 @@ Column (modifier = Modifier.verticalScroll(rememberScrollState())){
                 Icon(imageVector = Icons.Default.Star, contentDescription = "")
                 Icon(imageVector = Icons.Default.Star, contentDescription = "")
                 Icon(imageVector = Icons.Default.Star, contentDescription = "")
+                Icon(imageVector = Icons.Default.Star, contentDescription = "")
             }
             Spacer(modifier = Modifier.width(20.dp))
-            Button(onClick = {},
+            Button(onClick = {val callIntent = Intent(Intent.ACTION_DIAL)
+                callIntent.data = "tel:0720245837".toUri()
+                mContext.startActivity(callIntent)
+                             },
                 colors = ButtonDefaults.buttonColors(neworange),
                 shape = RoundedCornerShape(10.dp)
             ) {
@@ -243,9 +259,13 @@ Column (modifier = Modifier.verticalScroll(rememberScrollState())){
                 Icon(imageVector = Icons.Default.Star, contentDescription = "")
                 Icon(imageVector = Icons.Default.Star, contentDescription = "")
                 Icon(imageVector = Icons.Default.Star, contentDescription = "")
+                Icon(imageVector = Icons.Default.Star, contentDescription = "")
             }
             Spacer(modifier = Modifier.width(20.dp))
-            Button(onClick = {},
+            Button(onClick = {val callIntent = Intent(Intent.ACTION_DIAL)
+                callIntent.data = "tel:0720245837".toUri()
+                mContext.startActivity(callIntent)
+                             },
                 colors = ButtonDefaults.buttonColors(neworange),
                 shape = RoundedCornerShape(10.dp)
             ) {

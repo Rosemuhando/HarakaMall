@@ -2,12 +2,15 @@ package com.rosemuhando.harakamall.navigation
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.tooling.preview.Preview
+import androidx.navigation.NavController
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.rosemuhando.harakamall.ui.screens.about.AboutScreen
 import com.rosemuhando.harakamall.ui.screens.home.HomeScreen
+import com.rosemuhando.harakamall.ui.screens.intent.IntentScreen
 import com.rosemuhando.harakamall.ui.screens.item.ItemScreen
 import com.rosemuhando.harakamall.ui.screens.start.StartScreen
 
@@ -32,8 +35,9 @@ fun AppNavHost(
         composable(ROUT_ITEM) {
             ItemScreen(navController)
         }
-        composable(ROUT_START) {
-            StartScreen(navController)
+        composable(ROUT_INTENT) {
+            IntentScreen(navController)
         }
+
     }
 }

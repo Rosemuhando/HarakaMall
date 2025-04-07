@@ -10,7 +10,7 @@ fun ContactScreen(){
 
 }
 
-@Preview
+@Preview(showBackground = true)
 @Composable
 fun ContactScreenPreview(){
 
