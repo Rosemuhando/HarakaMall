@@ -41,7 +41,7 @@ fun HomeScreen(navController: NavController) {
         Spacer(modifier = Modifier.height(30.dp))
 
         Image(
-            painter = painterResource(R.drawable.home),
+            painter = painterResource(R.drawable.mall1),
             contentDescription = "home"
         )
         Spacer(modifier = Modifier.height(30.dp))
