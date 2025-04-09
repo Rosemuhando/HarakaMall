@@ -5,6 +5,7 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
@@ -33,7 +34,7 @@ fun HomeScreen(navController: NavController) {
     {
         Text(
             text = "HarakaMall",
-            fontSize = 30.sp,
+            fontSize = 50.sp,
             color = Color.Magenta,
             fontWeight = FontWeight.ExtraBold,
             )
@@ -42,7 +43,8 @@ fun HomeScreen(navController: NavController) {
 
         Image(
             painter = painterResource(R.drawable.mall1),
-            contentDescription = "home"
+            contentDescription = "home",
+            modifier = Modifier.size(400.dp),
         )
         Spacer(modifier = Modifier.height(30.dp))
         Text(
