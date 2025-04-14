@@ -7,18 +7,16 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
+import com.rosemuhando.harakamall.ui.screens.home.HomeScreen
 
 @Composable
 
-fun AboutScreen(navController: NavController){
-
-
-
+fun HomeScreen(navController: NavController) {
 }
 
 @Preview(showBackground = true)
 @Composable
-fun AboutScreenPreview(){
-    AboutScreen(rememberNavController())
+fun HomeScreenPreview(){
+    HomeScreen(rememberNavController())
 
 }

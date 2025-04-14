@@ -34,7 +34,7 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import com.rosemuhando.harakamall.navigation.ROUT_HOME
-import com.rosemuhando.harakamall.ui.screens.dashboard.DashboardScreen
+import com.rosemuhando.harakamall.ui.theme.neworange
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -55,8 +55,8 @@ fun ContactScreen(navController: NavController){
                     }
                 },
                 colors = TopAppBarDefaults.topAppBarColors(
-                    containerColor = Color.LightGray,
-                    titleContentColor = Color.LightGray,
+                    containerColor = neworange,
+                    titleContentColor = Color.White,
                     navigationIconContentColor = Color.White
                 )
             )
@@ -64,7 +64,7 @@ fun ContactScreen(navController: NavController){
 
         //BottomBar
         bottomBar = {
-            NavigationBar(containerColor = Color.LightGray){
+            NavigationBar(containerColor = neworange){
                 NavigationBarItem(
                     icon = { Icon(Icons.Default.Home, contentDescription = "home") },
                     label = { Text("Search") },
@@ -104,7 +104,7 @@ fun ContactScreen(navController: NavController){
         floatingActionButton = {
             FloatingActionButton(
                 onClick = { /* Add action */ },
-                containerColor = Color.LightGray
+                containerColor = neworange
             ) {
                 Icon(Icons.Default.Add, contentDescription = "Add")
             }

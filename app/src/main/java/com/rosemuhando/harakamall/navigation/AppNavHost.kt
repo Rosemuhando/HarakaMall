@@ -8,19 +8,21 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.rosemuhando.harakamall.ui.screens.about.AboutScreen
 import com.rosemuhando.harakamall.ui.screens.contact.ContactScreen
 import com.rosemuhando.harakamall.ui.screens.dashboard.DashboardScreen
+import com.rosemuhando.harakamall.ui.screens.form.FormScreen
 import com.rosemuhando.harakamall.ui.screens.home.HomeScreen
 import com.rosemuhando.harakamall.ui.screens.intent.IntentScreen
 import com.rosemuhando.harakamall.ui.screens.item.ItemScreen
+import com.rosemuhando.harakamall.ui.screens.service.ServiceScreen
+import com.rosemuhando.harakamall.ui.screens.splash.SplashScreen
 import com.rosemuhando.harakamall.ui.screens.start.StartScreen
 
 @Composable
 fun AppNavHost(
     modifier: Modifier = Modifier,
     navController: NavHostController = rememberNavController(),
-    startDestination: String = ROUT_DASHBOARD
+    startDestination: String = ROUT_SPLASH
 ) {
 
     NavHost(
@@ -46,6 +48,20 @@ fun AppNavHost(
         composable(ROUT_START) {
             StartScreen(navController)
         }
+        composable(ROUT_SERVICE) {
+            ServiceScreen(navController)
+        }
 
+            composable(ROUT_SPLASH) {
+                SplashScreen(navController)
+            }
+        composable(ROUT_FORM) {
+            FormScreen(navController)
+        }
     }
+}
+
+@Composable
+fun AboutScreen(x0: NavHostController) {
+    TODO("Not yet implemented")
 }

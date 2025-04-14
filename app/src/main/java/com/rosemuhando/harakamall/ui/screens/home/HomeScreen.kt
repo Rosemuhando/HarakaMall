@@ -12,24 +12,30 @@ import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.paint
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Shape
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import com.rosemuhando.harakamall.R
+import com.rosemuhando.harakamall.ui.theme.blue1
 
 
 @Composable
 
 fun HomeScreen(navController: NavController) {
     Column(
-        modifier = Modifier.fillMaxSize()
+        modifier = Modifier
+            .fillMaxSize()
+            .paint(painter = painterResource(R.drawable.img_3), contentScale = ContentScale.FillBounds)
     )
     {
         Text(
@@ -37,6 +43,7 @@ fun HomeScreen(navController: NavController) {
             fontSize = 50.sp,
             color = Color.Magenta,
             fontWeight = FontWeight.ExtraBold,
+            textAlign = TextAlign.Center
             )
 
         Spacer(modifier = Modifier.height(30.dp))
