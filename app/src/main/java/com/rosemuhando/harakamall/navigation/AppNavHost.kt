@@ -2,12 +2,16 @@ package com.rosemuhando.harakamall.navigation
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.NavController
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.rosemuhando.harakamall.data.UserDatabase
+import com.rosemuhando.harakamall.repository.UserRepository
+import com.rosemuhando.harakamall.ui.screens.auth.RegisterScreen
 import com.rosemuhando.harakamall.ui.screens.contact.ContactScreen
 import com.rosemuhando.harakamall.ui.screens.dashboard.DashboardScreen
 import com.rosemuhando.harakamall.ui.screens.form.FormScreen
@@ -17,6 +21,7 @@ import com.rosemuhando.harakamall.ui.screens.item.ItemScreen
 import com.rosemuhando.harakamall.ui.screens.service.ServiceScreen
 import com.rosemuhando.harakamall.ui.screens.splash.SplashScreen
 import com.rosemuhando.harakamall.ui.screens.start.StartScreen
+import com.rosemuhando.harakamall.viewmodel.AuthViewModel
 
 @Composable
 fun AppNavHost(
@@ -24,7 +29,7 @@ fun AppNavHost(
     navController: NavHostController = rememberNavController(),
     startDestination: String = ROUT_SPLASH
 ) {
-
+val context = LocalContext.current
     NavHost(
         navController = navController,
         startDestination = startDestination,
@@ -58,7 +63,38 @@ fun AppNavHost(
         composable(ROUT_FORM) {
             FormScreen(navController)
         }
+
+
+        //AUTHENTICATION
+
+        // Initialize Room Database and Repository for Authentication
+        val appDatabase = UserDatabase.getDatabase(context)
+        val authRepository = UserRepository(appDatabase.userDao())
+        val authViewModel: AuthViewModel = AuthViewModel(authRepository)
+        composable(ROUT_REGISTER) {
+            RegisterScreen(authViewModel, navController) {
+                navController.navigate(ROUT_LOGIN) {
+                    popUpTo(ROUT_REGISTER) { inclusive = true }
+                }
+            }
+        }
+        composable(ROUT_LOGIN) {
+            LoginScreen(authViewModel, navController) {
+                navController.navigate(ROUT_HOME) {
+                    popUpTo(ROUT_LOGIN) { inclusive = true }
+                }
+            }
+        }
+
+
+
     }
+}
+
+
+@Composable
+fun LoginScreen(x0: AuthViewModel, x1: NavHostController, content: @Composable () -> Unit) {
+    TODO("Not yet implemented")
 }
 
 @Composable

@@ -83,7 +83,7 @@ fun Task2Screen(navController: NavController) {
             //TopBar
             topBar = {
                 TopAppBar(
-                    title = { Text("Cryptocurrency", color = black) },
+                    title = { Text("Cryptocurrency", color = newwhite) },
                     navigationIcon = {
                         IconButton(onClick = { /* Handle back/nav */ }) {
                             Icon(Icons.Default.ArrowBack, contentDescription = "Back")
@@ -143,8 +143,12 @@ fun Task2Screen(navController: NavController) {
             floatingActionButton = {
                 FloatingActionButton(
                     onClick = { /* Add action */ },
-                    containerColor = neworange1,
-                ) {
+                    containerColor = neworange,
+                    shape = RoundedCornerShape(30.dp),
+
+
+
+                    ) {
                     Icon(Icons.Default.Add, contentDescription = "Add")
                 }
             },

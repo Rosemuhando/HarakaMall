@@ -12,3 +12,6 @@ const val ROUT_SERVICE= "service"
 const val ROUT_SPLASH= "splash"
 const val ROUT_FORM= "form"
 
+// authentication
+const val ROUT_REGISTER= "register"
+const val ROUT_LOGIN = "Login"

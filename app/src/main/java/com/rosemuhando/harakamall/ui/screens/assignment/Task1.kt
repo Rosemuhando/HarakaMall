@@ -51,7 +51,9 @@ fun Task1Screen(navController: NavController) {
             Image(
                 painter = painterResource(R.drawable.img_4),
                 contentDescription = "home",
-                modifier = Modifier.size(50.dp),
+                modifier = Modifier.size (50.dp)
+                    .padding(start = 2.dp, end = 5.dp),
+
             )
 
             Text(
@@ -65,24 +67,27 @@ fun Task1Screen(navController: NavController) {
 
     Column() {
 
-        Spacer(modifier = Modifier.height(100.dp))
+        Spacer(modifier = Modifier.height(70.dp))
 
 
 
         Image(
-            painter = painterResource(R.drawable.grocery),
+            painter = painterResource(R.drawable.img_9),
             contentDescription = "home",
-            modifier = Modifier.size(200.dp),
+            modifier = Modifier.height(300.dp)
+                .width(500.dp)
+                ,
+
 
         )
 
-
+        Spacer(modifier = Modifier.height(5.dp))
 
 
         Card(
             modifier = Modifier
                 .fillMaxWidth()
-                .height(500.dp)
+                .height(400.dp)
                 .offset(y = 90.dp),
             colors = CardDefaults.cardColors(newwhite)
 
@@ -101,7 +106,7 @@ fun Task1Screen(navController: NavController) {
                     text = " The Most Worth" +
                             "Grocery App",
                     fontSize = 40.sp,
-                    color = neworange,
+                    color = neworange1,
                     fontWeight = FontWeight.ExtraBold,
                     textAlign = TextAlign.Center
                 )
@@ -109,7 +114,7 @@ fun Task1Screen(navController: NavController) {
 
                 Button(
                     onClick = {},
-                    colors = ButtonDefaults.buttonColors(grey),
+                    colors = ButtonDefaults.buttonColors(neworange1),
                     shape = RoundedCornerShape(20.dp),
                     modifier = Modifier.fillMaxWidth().padding(start = 20.dp, end = 20.dp),
 
@@ -121,7 +126,7 @@ fun Task1Screen(navController: NavController) {
 
                 Button(
                     onClick = {},
-                    colors = ButtonDefaults.buttonColors(grey),
+                    colors = ButtonDefaults.buttonColors(neworange1),
                     shape = RoundedCornerShape(20.dp),
                     modifier = Modifier.fillMaxWidth().padding(start = 20.dp, end = 20.dp),
 
@@ -133,7 +138,7 @@ fun Task1Screen(navController: NavController) {
 
                 Button(
                     onClick = {},
-                    colors = ButtonDefaults.buttonColors(neworange),
+                    colors = ButtonDefaults.buttonColors(neworange1),
                     shape = RoundedCornerShape(20.dp),
                     modifier = Modifier.fillMaxWidth().padding(start = 20.dp, end = 20.dp),
 
@@ -143,7 +148,9 @@ fun Task1Screen(navController: NavController) {
                 Spacer(modifier = Modifier.height(20.dp))
                 Text(
                     text = " Aready member or log in ?",
-                    fontSize = 15.sp
+                    fontSize = 20.sp,
+                    color = neworange1,
+                    fontWeight = FontWeight.ExtraBold,
                 )
 
             }
