@@ -109,6 +109,7 @@ fun ServiceScreen(navController: NavController){
                     label = { Text("Favorites") },
                     selected = selectedIndex == 1,
                     onClick = { selectedIndex = 1
+                        navController.navigate(ROUT_HOME)
                         // navController.navigate(ROUT_HOME)
                     }
                 )
@@ -120,6 +121,7 @@ fun ServiceScreen(navController: NavController){
                     label = { Text("Profile") },
                     selected = selectedIndex == 2,
                     onClick = { selectedIndex = 2
+                        navController.navigate(ROUT_HOME)
                         //  navController.navigate(ROUT_HOME)
 
                     }

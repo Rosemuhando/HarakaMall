@@ -11,6 +11,8 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.rosemuhando.harakamall.data.UserDatabase
 import com.rosemuhando.harakamall.repository.UserRepository
+import com.rosemuhando.harakamall.ui.screens.about.AboutScreen
+import com.rosemuhando.harakamall.ui.screens.auth.LoginScreen
 import com.rosemuhando.harakamall.ui.screens.auth.RegisterScreen
 import com.rosemuhando.harakamall.ui.screens.contact.ContactScreen
 import com.rosemuhando.harakamall.ui.screens.dashboard.DashboardScreen
@@ -38,8 +40,8 @@ val context = LocalContext.current
         composable(ROUT_HOME) {
             HomeScreen(navController)
         }
-        composable(ROUT_ABOUT) {
-            AboutScreen(navController)
+        composable(ROUT_ABOUT ){
+           AboutScreen(navController)
         }
         composable(ROUT_ITEM) {
             ItemScreen(navController)
@@ -92,12 +94,3 @@ val context = LocalContext.current
 }
 
 
-@Composable
-fun LoginScreen(x0: AuthViewModel, x1: NavHostController, content: @Composable () -> Unit) {
-    TODO("Not yet implemented")
-}
-
-@Composable
-fun AboutScreen(x0: NavHostController) {
-    TODO("Not yet implemented")
-}

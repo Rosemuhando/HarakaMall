@@ -11,12 +11,12 @@ import com.rosemuhando.harakamall.ui.screens.home.HomeScreen
 
 @Composable
 
-fun HomeScreen(navController: NavController) {
+fun AboutScreen(navController: NavController) {
 }
 
 @Preview(showBackground = true)
 @Composable
-fun HomeScreenPreview(){
-    HomeScreen(rememberNavController())
+fun AboutScreenPreview(){
+    AboutScreen(rememberNavController())
 
 }

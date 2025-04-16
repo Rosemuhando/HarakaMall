@@ -16,7 +16,6 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.draw.paint
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
@@ -27,7 +26,6 @@ import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import com.rosemuhando.harakamall.R
 import com.rosemuhando.harakamall.navigation.ROUT_LOGIN
-import com.rosemuhando.harakamall.navigation.ROUT_START
 import com.rosemuhando.harakamall.ui.theme.neworange2
 import com.rosemuhando.harakamall.ui.theme.newwhite
 import kotlinx.coroutines.delay

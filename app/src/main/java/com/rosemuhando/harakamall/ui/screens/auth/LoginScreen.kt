@@ -5,7 +5,6 @@ import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.core.tween
 import androidx.compose.animation.fadeIn
 import androidx.compose.animation.fadeOut
-import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -26,7 +25,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import com.rosemuhando.harakamall.R
-import com.rosemuhando.harakamall.navigation.ROUT_INTENT
+import com.rosemuhando.harakamall.navigation.ROUT_DASHBOARD
 import com.rosemuhando.harakamall.navigation.ROUT_ITEM
 import com.rosemuhando.harakamall.navigation.ROUT_REGISTER
 import com.rosemuhando.harakamall.viewmodel.AuthViewModel
@@ -49,10 +48,10 @@ fun LoginScreen(
                 Toast.makeText(context, "Invalid Credentials", Toast.LENGTH_SHORT).show()
             } else {
                 if (user.role == "admin") {
-                    navController.navigate(ROUT_INTENT) {
+                    navController.navigate(ROUT_ITEM) {
                     }
                 } else {
-                    navController.navigate(ROUT_ITEM) {
+                    navController.navigate(ROUT_DASHBOARD) {
                     }
                 }
             }
